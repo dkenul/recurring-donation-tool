@@ -1,0 +1,6 @@
+.bsp
+.vscode
+.DS_Store
+project/project/
+project/target/
+target/
