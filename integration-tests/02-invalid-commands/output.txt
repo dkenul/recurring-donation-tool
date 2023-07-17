@@ -1,0 +1,5 @@
+Donors:
+Greg: Total: $300 Average: $150
+
+Campaigns:
+SaveTheDogs: Total: $300

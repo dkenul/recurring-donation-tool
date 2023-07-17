@@ -1,0 +1,7 @@
+Donors:
+Greg: Total: $300 Average: $150
+Janine: Total: $50 Average: $50
+
+Campaigns:
+HelpTheKids: Total: $200
+SaveTheDogs: Total: $150

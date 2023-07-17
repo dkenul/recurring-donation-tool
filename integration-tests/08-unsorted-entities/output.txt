@@ -1,0 +1,11 @@
+Donors:
+A: Total: $0 Average: $0
+X: Total: $0 Average: $0
+Y: Total: $0 Average: $0
+Z: Total: $0 Average: $0
+
+Campaigns:
+AAA: Total: $0
+XYY: Total: $0
+XYZ: Total: $0
+YZZ: Total: $0

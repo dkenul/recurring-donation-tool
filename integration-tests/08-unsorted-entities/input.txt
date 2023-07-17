@@ -1,0 +1,8 @@
+Add Donor Z $1000
+Add Donor Y $1000
+Add Donor A $100
+Add Donor X $100
+Add Campaign YZZ
+Add Campaign XYZ
+Add Campaign AAA
+Add Campaign XYY

@@ -1,0 +1,4 @@
+Add Donor Greg $1000
+Add Campaign SaveTheDogs
+Donate Greg SaveTheDogs $100.75
+Donate Greg SaveTheDogs $200.25
