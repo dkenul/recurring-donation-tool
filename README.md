@@ -9,8 +9,8 @@ A recurring donation command-line tool implemented in Scala.
 Given some text file `input.txt` containing newline-separated commands:
 
 ```
-cat input.txt | gfm-recurring
-gfm-recurring input.txt
+cat input.txt | ./gfm-recurring
+./gfm-recurring input.txt
 ```
 
 The tool will parse supported commands line by line and print a summary of the processed data with the following format:
@@ -121,7 +121,7 @@ As such, to run the script you should only need to download the repository and r
 cat input.txt | ./gfm-recurring
 ```
 
-**MacOS**: Run the native binary found in in `/bin/osx/gfm-recurring`
+**MacOS**: Run the native binary found in in `./bin/osx/gfm-recurring`
 ```
 ./bin/osx/gfm-recurring input.txt
 cat input.txt | ./bin/osx/gfm-recurring
