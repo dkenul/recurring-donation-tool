@@ -115,9 +115,9 @@ Multiple setup options are available:
 
 If you only want to run the tool without changing the underlying code, or running the test suite, this is the quickest approach. 
 
-**Linux**: The default `gfm-recurring` script provided in this repo can be executed as a native binary in Linux systems.
+**Linux**: The default `gfm-recurring` script provided in this repo can be executed as a native binary in Linux (x86_64) systems.
 
-As such, to run the script you should only need to download the repository and run:
+As such - to run the script you should only need to download the repository, navigate to the repo locally, and run:
 ```
 ./gfm-recurring input.txt
 cat input.txt | ./gfm-recurring
