@@ -156,12 +156,18 @@ A Dockerfile is included which can be used to set up a fully containerized envir
     docker exec -it [container id] bash
     ```
 7. Your working directory should be `/app` which is set up for development.
-8. Start the sbt console: 
-   ```
-   sbt
-   ```
 
-From the sbt console you can run the program manually:
+From here you can either run the native binary:
+```
+./gfm-recurring input.txt
+```
+
+Or launch the sbt console to run and test the code:
+```
+sbt
+```
+
+From the sbt console you can run the program:
 
 ```
 run input.txt
@@ -171,6 +177,18 @@ Or run the unit and integration tests
 ```
 test
 ```
+
+If you want to generate a new native binary you can do so by uncommenting the following line in `build.sbt`:
+```
+// enablePlugins(ScalaNativePlugin)
+```
+
+Make sure to exit the sbt console by calling `exit` and then running:
+```
+sbt nativeLink
+```
+
+Which will produce both `.jar` and native outputs in `./target/scala-3.3.0/`
 
 #### Manual
 
