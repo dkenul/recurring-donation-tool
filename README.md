@@ -205,7 +205,7 @@ Which will produce both `.jar` and native outputs in `./target/scala-3.3.0/`
 This is an interesting exercise because there are multiple implementation details and edge-cases to consider. The core concept of my solution is to provide a structure that is extensible, resillient, testable, and maintainable.
 
 Design decisions that contribute to this include:
-* Using a type-safe language which promotes resillience.
+* Using a statically typed language which promotes resillience.
 * Favoring immutablility to ensure that each application component is testable and maintainable.
 * Isolating state management to `helpers/DataManager`. In the future, these methods can be updated to query a real database rather than using in-memory data structures.
 * Isolating command logic to `models/Command`. This file provided an abstract `Command` trait. Each supported command extends this trait which promotes extensibility and maintainability. The steps required to author new commands would be:
