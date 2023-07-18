@@ -109,9 +109,11 @@ Pertains to: `Add Donor ... [monthly limit]` and `Donate ... [amount]`
 
 ## Setup
 
-I've attempted to provide multiple setup options since Scala applications can be cumbersome to set up.
+Multiple setup options are available:
 
 #### Minimal
+
+If you only want to run the tool without changing the underlying code, or running the test suite, this is the quickest approach. 
 
 **Linux**: The default `gfm-recurring` script provided in this repo can be executed as a native binary in Linux systems.
 
@@ -196,12 +198,14 @@ Design decisions that contribute to this include:
 
 In retrospect, I would have liked to create a more clear and isolated validation flow. Currently, there is a limited amount of validation which can be found in `models/Command`. However, validation functions should be extracted into their own helper and supplied with Unit tests.
 
-I also opted for an eager processing approach - aka - validation and execution errors are cataloged and ignored. This may not be desirable depending on application needs. For example, we may want to log warnings for invalid commands or execution erros. We may want to ensure that all commands are valid before exeuting any. We may also want to execute valid commands until we encounter the first error.
+I also opted for an eager processing approach - aka - validation and execution errors are cataloged and ignored. This may not be desirable depending on application needs. For example, we may want to log warnings for invalid commands. We may want to ensure that all commands are valid before exeuting any. We may also want to execute valid commands until we encounter the first error. The current code supports all of these approaches with minor changes.
+
+Finally, I didn't spend much time considering input edge cases not related to the actual data. For example, handling malformed files. Currently the tool expects exactly one input file in the format `[anything].txt` or assumes that we are reading from stdin. This would ideally be expanded on to ensure resilience and support additional features like flags which can make the tool more customizable.
 
 
 
 ## Testing
 
-I've included both Unit and Integration tests for this problem (found in `src/test/scala/`), but given time contraints, I did not prioritize Unit test coverage.
+I've included both Unit and Integration tests for this project (found in `src/test/scala/`), but given time contraints, I did not prioritize Unit test coverage.
 
 Files consumed by the integration tests can be found in `integration-tests/[test folder]` where each test folder contains a given `input.txt` and an expected `output.txt`. While I am currently running these using ScalaTest for convenience, they could easily be moved to a CI tool like GitHub Actions. 
